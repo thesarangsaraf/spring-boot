@@ -12,14 +12,14 @@ pipeline {
         stage('Build') {
             steps {
                 // Build your Spring Boot application using mvnw (project level maven tool)
-                sh './mvnw clean package'
+                sh 'mvn clean package'
             }
         }
  
         stage('Test') {
             steps {
                 // Run tests (if applicable)
-                sh './mvnw test'
+                sh 'mvn test'
             }
         }
     }
